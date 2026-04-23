@@ -16,7 +16,7 @@
     <meta name="apple-mobile-web-app-title" content="EN Home" />
     <link rel="manifest" href="/images/favicon/site.webmanifest" />
 </head>
-<body>
+<body id="top">
     <div class="container">
     <header>
         <a href="/" class="logo"><img src="images/logo.svg" alt="logo"></a>
@@ -29,7 +29,7 @@
         </ul>
 
     </nav>
-        <button class="header-btn">Замовити урок</button>
+        <button class="button">Замовити урок</button>
     </header>
 <main>
     <section class="offers">
@@ -82,11 +82,12 @@
                         <p><span>2700 UAN</span> / місяць</p>
                         <a href="">Записатися</a>
                     </div>
-                    <div class="services-block">
+                    <div class="services-block sale">
                         <img src="/images/speakingClub.svg" alt="imageError">
                         <h3>Speaking club</h3>
                         <p><span class="lined">2700</span><span> 1900 UAN</span> / місяць</p>
                         <a href="">Записатися</a>
+                        <img class="discount" src="images/discount.svg" alt="discount">
                     </div>
                 </div>
     </section>
@@ -114,10 +115,13 @@
                 <input type="text">
                 <p>Коментар (опціонально)</p>
                 <input type="text">
-                <button>Надіслати</button>
+                <button class="button">Надіслати</button>
             </div>
     </section>
 </main>
+
+
+<a href="#top"><img class="go-to-top" src="/images/goTopArrow.svg" alt="go-to-top"></a>
 </div>
 </body>
 </html>
