@@ -100,6 +100,44 @@ nav a{
     width: 400px;
     height: 310px;
 }
+.container-tooltip{
+    position: relative;
+}
+.tool-tip{
+    display: none;
+}
+.container-tooltip img:hover + p{
+    display: inline-block;
+    background-color: #E0E7FF;
+    color: var(--primary-text-color);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 12px;
+    min-width: 216px;
+    position: absolute;
+    bottom: 30px;
+    right: 50%;
+    transform: translateX(50%);
+}
+.tool-tip::before{
+    content: "";
+    background-color: #E0E7FF;
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    right: 50%;
+    transform: translateX(50%) rotate(45deg);
+    bottom: -4px;
+    border-radius: 1px;
+}
+.header-statistic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
 .statistic h2{
     text-align: center;
 }
