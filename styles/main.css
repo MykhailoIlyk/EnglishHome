@@ -28,15 +28,19 @@ section {
   padding: 0 16px;
   margin: 0 auto;
 }
-header {
+header .container {
   align-items: center;
-  padding: 20px 0;
+  padding: 20px 16px;
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+header {
+  z-index: 1;
   position: sticky;
   top: 0;
   background-color: #faf5ff;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
 }
 
 .main-nav ul {
@@ -96,6 +100,7 @@ nav a {
   padding: 8px 16px;
   background-color: #b05efa99;
   color: white;
+  border-radius: 4px;
   /* background-color: transparent; */
 }
 .offers h1 {
@@ -109,6 +114,9 @@ nav a {
 }
 .container-tooltip {
   position: relative;
+}
+.container-tooltip img {
+  z-index: -1;
 }
 .tool-tip {
   display: none;
@@ -177,13 +185,16 @@ nav a {
   text-align: center;
 }
 .statistic ul {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
+  gap: 56px 24px;
+  padding: 0;
 }
 .statistic ul li {
   text-align: center;
   list-style: none;
 }
+
 .statistic ul li span {
   margin-bottom: 12px;
   align-self: center;
@@ -193,29 +204,31 @@ nav a {
 }
 
 .services h2 {
-  margin: 0 536px;
+  text-align: center;
 }
 .services .services-text {
-  margin: 16px 208px;
+  margin: 0 auto 15px;
+  max-width: 808px;
   text-align: center;
 }
 .services-container {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 288px);
+  gap: 24px;
+  justify-content: center;
 }
 .services-block {
   background-color: #fff;
   padding: 52px 32px 32px 32px;
   border: solid 1px #cbd5e1;
   border-radius: 5%;
-  width: 288px;
-  height: 383px;
 }
 .services-block span {
   font-weight: 800;
 }
 .sale {
   position: relative;
+  z-index: -1;
 }
 .discount {
   position: absolute;
@@ -247,8 +260,10 @@ nav a {
   margin-bottom: 55px;
 }
 .Our-difference ul {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
+  gap: 30px 15px;
+  padding: 0;
 }
 .Our-difference ul li {
   text-align: center;
@@ -311,4 +326,28 @@ footer li {
   list-style: none;
   line-height: 2;
   color: #fff;
+}
+@media (max-width: 767px) {
+  .main-nav {
+    display: none;
+  }
+  .offers {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+  .offersStack {
+    width: 100%;
+  }
+  .offersStack h1 {
+    text-align: center;
+    font-size: 24px;
+  }
+  .OurOffers p {
+    font-size: 14px;
+    margin: 8px 4px;
+  }
+  .Contact-us {
+    flex-direction: column;
+    padding: 35px 20px;
+  }
 }
